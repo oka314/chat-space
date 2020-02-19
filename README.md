@@ -31,12 +31,13 @@ usersテーブル
 ### Association
 - has_many :groups, through: :users_groups
 - has_many :posts
+- has_many :users_groups
 
  postsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |image|text||
-|text|text||null: false|
+|text|text|
 |users_id|integer|null: false, foreign_key: true|
 |groups_id|integer|null: false, foreign_key: true|
 
@@ -47,7 +48,7 @@ usersテーブル
  groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|text|null: false|
+|name|string|null: false|
 |user_id|integer|null: false, foreign_key: true|
 |post_id|integer|null: false, foreign_key: true|
 ### Association
@@ -62,4 +63,5 @@ users_groupsテーブル
 ### Association
 - belongs_to :user
 - belongs_to :group
+- has_many :users_groups
 
