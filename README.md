@@ -61,5 +61,5 @@ users_groupsテーブル
 |group_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
-- belongs_to :group
+- belongs_to :
 
