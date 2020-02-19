@@ -40,10 +40,10 @@ usersテーブル
 |text|text|
 |users_id|integer|null: false, foreign_key: true|
 |groups_id|integer|null: false, foreign_key: true|
-
 ### Association
-- has_many :users
-- has_many :comments
+- belongs_to :user
+- nelongs_to :group
+
 
  groupsテーブル
 |Column|Type|Options|
@@ -54,6 +54,7 @@ usersテーブル
 ### Association
 - has_many :users through: :users_groups
 - has_many :posts
+- has_many :users_groups
 
 users_groupsテーブル
 |Column|Type|Options|
@@ -63,5 +64,5 @@ users_groupsテーブル
 ### Association
 - belongs_to :user
 - belongs_to :group
-- has_many :users_groups
+
 
