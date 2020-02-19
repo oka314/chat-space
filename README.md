@@ -42,7 +42,7 @@ usersテーブル
 |groups_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
-- nelongs_to :group
+- belongs_to :group
 
 
  groupsテーブル
