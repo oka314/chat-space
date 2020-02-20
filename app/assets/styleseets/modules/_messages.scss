@@ -2,18 +2,40 @@
   box-sizing: border-box;
 }
 
-.chat-main__massage-list {
-  height: 100vh;
-  width: calc(100vw - 300px);
-  background-color:#ffffff ;
-
-}
-.side-bar__group-list {
-  width: 300px;
-  height: 100vh;
-  background-color: #253151;
-}
-
 .wrapper {
   display: flex;
+  height: 100vh;
+}
+.bar {
+ 
+  &__top {
+    background-color: #253141;
+    height: 100px;
+    width: 300px;
+  }
+  &__bottom {
+    background-color: #2f3e51;
+    width: 300px;
+    height: calc(100vh - 100px);
+  }
+}
+
+
+
+.chat{
+  &__group {
+    height: 100px;
+    width: calc(100vw - 300px);
+    border-bottom: solid 1px #eeeeee ;
+  }
+  &__main {
+    height: calc(100vh - 190px);
+    width: calc(100vw - 300px);
+    background-color: #fafafa;
+  }
+  &__form {
+    height: 90px;
+    width: calc(100vw - 300px);
+    background-color: #d2d2d2;
+  }
 }
