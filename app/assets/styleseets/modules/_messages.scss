@@ -12,6 +12,9 @@
     background-color: #253141;
     height: 100px;
     width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   &__bottom {
     background-color: #2f3e51;
@@ -41,13 +44,15 @@
 }
 
 .name {
-  display: flex;
+  // display: flex;
   height: 20px;
   width: 220px;
   background-color: white;
-  margin: 0 auto;
-
+  // margin: 0 auto;
+  // align-items: center;
+  
   &__bar {
-    
+    height: 20px;
+    width: 220px;
   }
 }
