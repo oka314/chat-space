@@ -54,17 +54,36 @@ height: 100vh;
   width: calc(100vw - 300px);
   &__group {
       height: 100px;
-      background-color: red;
+      background-color:#ffffff;
       border-bottom: solid 1px #eeeeee;
-    }
+      padding:0px 40px;
+      .group-name { 
+        &__left {
+          display: flex;
+          &__list {
+            font-size: 12px;
+            color: #999999;
+            margin-top: 35px;
+          }
+          &__name {
+            font-size: 12px;
+            color: #999999;
+          }
+            
+          }
+          
+        }
+      }
+    
     &__comment {
       background-color: blue;
       height: calc(100vh - 190px);
-    }
+    
     &__message {
       background-color: yellow;
       height: 90px;
-    }
+     }
+   }
  }
  a {
  color: white;
