@@ -57,23 +57,15 @@ height: 100vh;
       background-color:#ffffff;
       border-bottom: solid 1px #eeeeee;
       padding:0px 40px;
-      .group-name { 
-        &__left {
-          display: flex;
-          &__list {
-            font-size: 12px;
-            color: #999999;
-            margin-top: 35px;
-          }
-          &__name {
-            font-size: 12px;
-            color: #999999;
-          }
-            
-          }
-          
-        }
+      &--left {
+        color: #333333;
+        font-size: 20px;
+        margin-top: 35px;
       }
+      
+      
+      
+    }
     
     &__comment {
       background-color: blue;
