@@ -1,8 +1,16 @@
-.bar
- .bar__top
-  .name
-   .name__bar
-    .name__bar--left
-    .name__bar--right
- .bar__bottom
- 
+.side-bar
+  .side-bar__top
+    .top-items
+      .top-items__name
+        oka
+      .top-items__icon
+        = link_to "#", class: "top-items___icon--btn" do
+          = icon('far', 'edit')
+        = link_to "#", class: "top-items___icon--btn" do
+          = icon('fas', 'cog')
+  .side-bar__bottom
+    .group  
+      .group__items
+        techcamp
+      .group__text
+        まだメッセージがありません
