@@ -1,7 +1,6 @@
 * {
   box-sizing: border-box;
 }
-
 .wrapper {
 display: flex;
 height: 100vh;
@@ -43,13 +42,10 @@ height: 100vh;
         color: white;
         font-size: 11px;
         font-weight: bold;
-        
-
     }
    }
   }
 }
-
  .chat{
   width: calc(100vw - 300px);
   .main-header {
@@ -59,10 +55,8 @@ height: 100vh;
     justify-content: space-between;
     padding: 0 40px;
     display: flex;
-    
     &__left-box{
       margin-top: 35px;
-      
       &__current-group {
         margin-bottom: 15px;
         font-size: 20px;
@@ -84,10 +78,7 @@ height: 100vh;
          line-height: 40px;
          margin-top: 28px;
        }
-      }
-
-    
-      
+      }      
       .message-date {
       background-color:#eeeeee;
       height: calc(100vh - 190px);
