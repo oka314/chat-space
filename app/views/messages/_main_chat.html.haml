@@ -21,7 +21,9 @@
     %form.new-comment
       .comment-box
         %input.comment-box__text{:type => "text", :placeholder => "type a message" }
+        %label.comment-box__pic
+          =icon('fas', 'image')
+          %inpute{type: "file", class: "abc"}
+      %input.send-btn{:type => "submit"}
         
 
-    .send-btn
-     
