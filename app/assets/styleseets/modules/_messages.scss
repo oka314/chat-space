@@ -108,8 +108,11 @@ height: 100vh;
         padding: 20px 40px;
         form {
           display: flex;
+          position: relative;
+            .abc {
+              display: none;
+            }
           .comment-box{
-            position: relative;
             width: 100%;
             display: flex;
             &__text {
@@ -117,15 +120,11 @@ height: 100vh;
               height: 50px;
               width: 100%;
               border-style:none ;
-              
             }
             &__pic {
               position: absolute;
-              right: 10px;
+              right: 130px;
               top: 10px;
-            }
-            .abc {
-              display: none;
             }
           }
           .send-btn {

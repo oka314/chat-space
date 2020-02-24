@@ -16,14 +16,12 @@
       .date
         2020/02/22(sat) 21:23
     .message-date__comment
-      おはよう！
+      = render @messages
   .message-form
-    %form.new-comment
-      .comment-box
-        %input.comment-box__text{type: "text", placeholder: "type a message" }
-        %label.comment-box__pic
-          =icon('fas', 'image')
-          %input{type: "file", class: "abc"}
-      %input.send-btn{type: "submit"}
-        
-
+    .form
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'comment-box__text', placeholder: "type a message" 
+        = f.label :image, class: 'comment-box__pic' do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class: 'abc'
+        = f.submit 'send', class: 'send-btn'
