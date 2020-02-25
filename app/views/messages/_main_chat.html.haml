@@ -2,28 +2,25 @@
   .main-header
     .main-header__left-box
       .main-header__left-box__current-group
-        test
+        =@group.name
       .main-header__left-box__member-list
-        Member : 
-        .main-header__left-box__member-list__member
-          1111
-    .main-header__edit-btn
-      Edit
+        ="Member:" + @group.users.pluck(:name).join(", ")    
+    = link_to edit_group_path(@group)  do
+      .main-header__edit-btn edit
+  
   .message-date
     .message-date__log
       .user
-        1111
-      .date
-        2020/02/22(sat) 21:23
-    .message-date__comment
-      おはよう！
-  .message-form
-    %form.new-comment
-      .comment-box
-        %input.comment-box__text{type: "text", placeholder: "type a message" }
-        %label.comment-box__pic
-          =icon('fas', 'image')
-          %input{type: "file", class: "abc"}
-      %input.send-btn{type: "submit"}
         
-
+      .date
+        
+    .message-date__comment
+      = render @messages
+  .message-form
+    .form
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'comment-box__text', placeholder: "type a message" 
+        = f.label :image, class: 'comment-box__pic' do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class: 'abc'
+        = f.submit 'send', class: 'send-btn'
