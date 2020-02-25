@@ -4,11 +4,10 @@
       .main-header__left-box__current-group
         =@group.name
       .main-header__left-box__member-list
-        Member : 
-        .main-header__left-box__member-list__member
-          1111
-    .main-header__edit-btn
-      Edit
+        ="Member:" + @group.users.pluck(:name).join(", ")    
+    = link_to edit_group_path(@group)  do
+      .main-header__edit-btn edit
+  
   .message-date
     .message-date__log
       .user
