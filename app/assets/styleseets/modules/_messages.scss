@@ -83,6 +83,7 @@ height: 100vh;
       background-color:#eeeeee;
       height: calc(100vh - 190px);
       padding:46px 40px;
+      overflow: auto;
         &__log {
           display: flex;
           margin-bottom: 12px;
