@@ -9,13 +9,7 @@
       .main-header__edit-btn edit
   
   .message-date
-    .message-date__log
-      .user
-        
-      .date
-        
-    .message-date__comment
-      = render @messages
+    = render @messages
   .message-form
     .form
       = form_for [@group, @message] do |f|
