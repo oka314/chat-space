@@ -39,6 +39,8 @@ $(function(){
     e.preventDefault();
     var formData = new FormData(this);
     var url = $(this).attr('action');
+    $('.send-btn').removeAttr('data-disable-with');
+    
     $.ajax ({
       url: url,
       type: "POST",
@@ -53,5 +55,8 @@ $(function(){
       $('.message-date').animate({ scrollTop: $('.message-date')[0].scrollHeight});
       $('form')[0].reset();
     })
+    .fail(function(){
+      alert("メッセージ送信に失敗しました");
+    });
   })
  });
