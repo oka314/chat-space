@@ -75,7 +75,7 @@ $(function(){
     });
   });
   var reloadMessages = function(){
-    var last_message_id = $('.message-date:last').data("message-id");
+    var last_message_id = $('.message-date__log:last').data("message-id");
     $.ajax ({
       url: "api/messages",
       type: 'get',
