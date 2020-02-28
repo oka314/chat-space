@@ -1,6 +1,6 @@
 $(function(){
-  function buildHTML(message){
-    if ( message.image ) {
+  console.log(last_message_id)
+  if ( message.image ) {
        var html =
           `<div class= "message-date__log">
             <div class= "user">
@@ -34,13 +34,14 @@ $(function(){
         </div>`
      return html;
     };
-   }
+   
   $('#new_message').on('submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
     var url = $(this).attr('action');
     $('.send-btn').removeAttr('data-disable-with');
-    
+  var reloadMessages = function() {
+    var last_message_id = $('.message:last').data("message-id");
     $.ajax ({
       url: url,
       type: "POST",
@@ -56,7 +57,8 @@ $(function(){
       $('form')[0].reset();
     })
     .fail(function(){
-      alert("メッセージ送信に失敗しました");
+      alert("error");
     });
+  };
   })
  });
